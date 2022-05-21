@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: diagrams
+  labels:
+    app: diagrams
+spec:
+  containers:
+  - image: robinhoodis/diagrams:0.8.4
+    command:
+      - "sleep"
+      - "604800"
+    imagePullPolicy: Always
+    name: diagrams
+  restartPolicy: Always
