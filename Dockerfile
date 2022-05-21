@@ -6,7 +6,8 @@ ARG DEBIAN_FRONTEND=noninteractive
 RUN apt-get --yes update \
     && apt-get --yes upgrade \
     && apt -y install apt-utils \
-    && apt -y install graphviz
+    && apt -y install graphviz python3-pip \
+    && pip install diagrams
 
 RUN groupadd -g 1000 ubuntu
 RUN useradd -rm -d /home/ubuntu -s /bin/bash -g 1000 -G sudo -u 1000 ubuntu
