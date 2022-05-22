@@ -6,7 +6,7 @@ metadata:
     app: diagrams
 spec:
   containers:
-  - image: robinhoodis/diagrams:0.8.4
+  - image: robinhoodis/diagrams:0.8.5
     command:
       - "sleep"
       - "604800"
