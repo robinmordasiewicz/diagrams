@@ -15,5 +15,4 @@ RUN touch /home/ubuntu/.hushlogin
 RUN chown -R ubuntu:ubuntu /home/ubuntu
 USER ubuntu:ubuntu
 WORKDIR /home/ubuntu
-
 RUN pip install diagrams
