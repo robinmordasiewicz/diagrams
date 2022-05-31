@@ -8,7 +8,9 @@ RUN apt-get --yes update \
     && apt-get -y install apt-utils \
     && apt-get -y install graphviz python3-pip software-properties-common python3
 
-RUN echo "diagrams-`cat VERSION`" > /VERSION
+COPY VERSION /VERSION
+RUN echo "diagrams-`cat /VERSION`" >> /VERSION.tmp
+RUN mv /VERSION.tmp /VERSION
 WORKDIR /home/ubuntu
 RUN pip install diagrams
 
